@@ -1,0 +1,51 @@
+media:
+  input: images
+  output: images
+
+content:
+  - name: artworks
+    label: Artwork
+    type: collection
+    path: artworks
+    filename: "{fields.title}.md"
+    view:
+      fields: [image, title, status, price]
+      primary: title
+      sort: [title]
+    fields:
+      - name: title
+        label: Painting Title
+        type: string
+        required: true
+
+      - name: image
+        label: Painting Photo
+        type: image
+        required: true
+
+      - name: medium
+        label: Medium
+        type: string
+        default: Acrylic
+
+      - name: size
+        label: Size
+        type: string
+
+      - name: price
+        label: Price (CAD)
+        type: number
+
+      - name: status
+        label: Status
+        type: select
+        options:
+          values:
+            - Available
+            - Sold
+        default: Available
+
+      - name: featured
+        label: Featured on Homepage
+        type: boolean
+        default: false
