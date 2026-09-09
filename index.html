@@ -1,1 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Eilarwyn Fine Art Studio | Jo McDonald</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f7f3e8;
+    color: #173f32;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+header {
+    text-align: center;
+    padding: 55px 20px 30px;
+    border-top: 8px solid #174c3b;
+}
+
+.logo {
+    font-size: 70px;
+    font-style: italic;
+    margin: 0;
+    font-weight: normal;
+}
+
+.studio {
+    font-size: 25px;
+    letter-spacing: 7px;
+    margin-top: 4px;
+}
+
+.tagline {
+    font-size: 20px;
+    font-style: italic;
+    margin: 15px 0;
+}
+
+.artist {
+    letter-spacing: 5px;
+    font-size: 18px;
+}
+
+nav {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #a48a48;
+    border-bottom: 1px solid #a48a48;
+}
+
+nav a {
+    color: #173f32;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.hero {
+    max-width: 1100px;
+    margin: 55px auto;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 850px;
+    max-height: 650px;
+    object-fit: contain;
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+
+.hero h2 {
+    font-weight: normal;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    font-style: italic;
+}
+
+.gallery-section {
+    max-width: 1150px;
+    margin: 70px auto;
+    padding: 0 25px;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px;
+    margin-top: 40px;
+}
+
+.artwork {
+    text-align: center;
+}
+
+.artwork img {
+    width: 100%;
+    height: 430px;
+    object-fit: contain;
+}
+
+.artwork h3 {
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 21px;
+}
+
+.artwork p {
+    margin-top: 0;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    margin-top: 80px;
+    padding: 40px 20px;
+    border-top: 1px solid #a48a48;
+    line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+    .logo {
+        font-size: 48px;
+    }
+
+    .studio {
+        font-size: 18px;
+        letter-spacing: 4px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .artwork img {
+        height: auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1 class="logo">Eilarwyn</h1>
+    <div class="studio">FINE ART STUDIO</div>
+
+    <div class="tagline">
+        Original Art, Inspired by Nature's Wild Beauty
+    </div>
+
+    <div class="artist">
+        JO MCDONALD · ARTIST
+    </div>
+</header>
+
+<nav>
+    <a href="#">HOME</a>
+    <a href="#gallery">GALLERY</a>
+    <a href="#about">ABOUT</a>
+    <a href="#events">EVENTS</a>
+    <a href="#contact">CONTACT</a>
+</nav>
+
+<section class="hero">
+
+    <img src="J. McDonald Sunlit 16x20 Acrylic Framed 18x22.jpg"
+         alt="Sunlit by Jo McDonald">
+
+    <h2>Sunlit</h2>
+
+    <p>
+        Acrylic · 16 × 20
+    </p>
+
+</section>
+
+<section class="gallery-section" id="gallery">
+
+<h2>SELECTED WORKS</h2>
+
+<div class="gallery">
+
+<div class="artwork">
+<img src="J.McDonald Bragg Creek Acrylic 10x10.jpg"
+     alt="Bragg Creek by Jo McDonald">
+<h3>Bragg Creek</h3>
+<p>Acrylic · 10 × 10</p>
+</div>
+
+<div class="artwork">
+<img src="Jo McDonald Dusk 12x12.jpg"
+     alt="Dusk by Jo McDonald">
+<h3>Dusk</h3>
+<p>12 × 12</p>
+</div>
+
+<div class="artwork">
+<img src="J.McDonald The Golden Hour 24 x 12 Acrylic Unframed .jpg"
+     alt="The Golden Hour by Jo McDonald">
+<h3>The Golden Hour</h3>
+<p>Acrylic · 24 × 12</p>
+</div>
+
+<div class="artwork">
+<img src="J.McDonald The Peak 7.5 x 7.5 Acrylic Framed 16.5x16.5.jpg"
+     alt="The Peak by Jo McDonald">
+<h3>The Peak</h3>
+<p>Acrylic · 7.5 × 7.5</p>
+</div>
+
+</div>
+</section>
+
+<section class="gallery-section" id="about">
+<h2>ABOUT THE ARTIST</h2>
+
+<p style="max-width:750px; margin:30px auto; text-align:center; line-height:1.8;">
+Jo McDonald is a Calgary artist whose work is inspired by the wild beauty
+of the Canadian landscape. Through expressive colour, movement and
+brushwork, she explores the places and moments in nature that invite us
+to stop, look and feel.
+</p>
+</section>
+
+<section class="gallery-section" id="events">
+<h2>SHOWS & EVENTS</h2>
+
+<p style="text-align:center;">
+Upcoming exhibitions and events will be posted here.
+</p>
+</section>
+
+<footer id="contact">
+
+<strong>EILARWYN FINE ART STUDIO</strong><br>
+
+Jo McDonald · Artist<br>
+
+eilarwynfineartstudio@gmail.com
+
+</footer>
+
+</body>
+</html>
