@@ -6,7 +6,7 @@ content:
   - name: artworks
     label: Artwork
     type: collection
-    path: artworks
+    path: _artworks
     filename: "{fields.title}.md"
     view:
       fields: [image, title, status, price]
