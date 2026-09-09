@@ -239,7 +239,34 @@ footer {
 
 </div>
 </section>
+<section class="gallery-section" id="available">
+<h2>AVAILABLE WORKS</h2>
 
+<div class="gallery">
+
+{% for artwork in site.artworks %}
+{% if artwork.status == "Available" %}
+
+<div class="artwork">
+  <a href="{{ artwork.image | relative_url }}" target="_blank">
+    <img src="{{ artwork.image | relative_url }}"
+         alt="{{ artwork.title }} by Jo McDonald">
+  </a>
+
+  <h3>{{ artwork.title }}</h3>
+
+  <p>
+    {{ artwork.medium }}
+    {% if artwork.size %} · {{ artwork.size }}{% endif %}
+    {% if artwork.price %} · ${{ artwork.price }} CAD{% endif %}
+  </p>
+</div>
+
+{% endif %}
+{% endfor %}
+
+</div>
+</section>
 <section class="gallery-section" id="about">
 <h2>ABOUT THE ARTIST</h2>
 
