@@ -5,5 +5,5 @@ medium: Acrylic
 size: 16x20
 price: 200
 status: Available
-featured: true
+featured: false
 ---
