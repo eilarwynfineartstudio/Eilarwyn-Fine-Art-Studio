@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+<style>
+.artwork-page {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.artwork-page h1 {
+  margin-bottom: 10px;
+}
+
+.artwork-details {
+  margin-bottom: 35px;
+  line-height: 1.8;
+}
+
+.main-artwork-image {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 40px;
+  display: block;
+}
+
+.additional-photos {
+  margin-top: 50px;
+}
+
+.additional-photos h2 {
+  margin-bottom: 30px;
+}
+
+.additional-photos img {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 35px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+}
+</style>
+
+<div class="artwork-page">
+
+  <h1>{{ page.title }}</h1>
+
+  <div class="artwork-details">
+    {{ page.medium }}
+    {% if page.size %} · {{ page.size }}{% endif %}
+
+    <br>
+
+    {% if page.status == "Sold" %}
+      <strong>SOLD</strong>
+    {% elsif page.price %}
+      ${{ page.price }} CAD
+    {% endif %}
+  </div>
+
+  <img
+    class="main-artwork-image"
+    src="{{ page.image | relative_url }}"
+    alt="{{ page.title }} by Jo McDonald"
+  >
+
+  {% if page.additional_images and page.additional_images.size > 0 %}
+  <div class="additional-photos">
+
+    <h2>Additional Views</h2>
+
+    {% for image in page.additional_images %}
+      <img
+        src="{{ image | relative_url }}"
+        alt="Additional view of {{ page.title }} by Jo McDonald"
+      >
+    {% endfor %}
+
+  </div>
+  {% endif %}
+
+  <a class="back-link" href="{{ '/' | relative_url }}">
+    ← Back to Gallery
+  </a>
+
+</div>
