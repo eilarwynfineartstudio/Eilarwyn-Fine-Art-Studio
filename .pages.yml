@@ -8,8 +8,6 @@ content:
     type: collection
     path: _artworks
     filename: "{fields.title}.md"
-    default:
-      layout: artwork
     view:
       fields: [image, title, status, price]
       primary: title
