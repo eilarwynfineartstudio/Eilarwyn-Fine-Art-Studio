@@ -232,7 +232,7 @@ footer {
 {% if artwork.status == "Available" %}
 
 <div class="artwork">
-  <a href="{{ artwork.image | relative_url }}" target="_blank">
+  <a href="{{ artwork.image | relative_url }}">
     <img src="{{ artwork.image | relative_url }}"
          alt="{{ artwork.title }} by Jo McDonald">
   </a>
