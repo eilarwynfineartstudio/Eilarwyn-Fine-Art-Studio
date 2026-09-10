@@ -49,3 +49,8 @@ content:
         label: Featured on Homepage
         type: boolean
         default: false
+
+      - name: selected
+        label: Show in Selected Works
+        type: boolean
+        default: false
