@@ -189,14 +189,35 @@
 
   {% endif %}
 
- {% if page.status == "Available" %}
+{% if page.status == "Available" %}
 
-<a class="back-link"
-   href="mailto:eilarwynfineartstudio@gmail.com?subject=Inquiry%20about%20{{ page.title | url_encode }}">
-  CONTACT ABOUT THIS PAINTING
-</a>
+<section class="inquiry-form">
 
-<br>
+  <h2>INTERESTED IN THIS PAINTING?</h2>
+
+  <p>Send Jo a message about {{ page.title }}.</p>
+
+  <form action="https://formspree.io/f/xwlkayvq" method="POST">
+
+    <input type="hidden" name="Painting" value="{{ page.title }}">
+
+    <p>
+      <input type="text" name="name" placeholder="Your name" required>
+    </p>
+
+    <p>
+      <input type="email" name="email" placeholder="Your email" required>
+    </p>
+
+    <p>
+      <textarea name="message" placeholder="Your message" rows="6" required></textarea>
+    </p>
+
+    <button type="submit">SEND INQUIRY</button>
+
+  </form>
+
+</section>
 
 {% endif %}
   
