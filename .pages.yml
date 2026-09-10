@@ -54,3 +54,8 @@ content:
         label: Show in Selected Works
         type: boolean
         default: false
+
+       - name: additional_images
+        label: Additional Photos
+        type: image
+        list: true
