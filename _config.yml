@@ -3,4 +3,4 @@ description: Original Art, Inspired by Nature's Wild Beauty
 
 collections:
   artworks:
-    output: false
+    output: true
