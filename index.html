@@ -200,42 +200,26 @@ footer {
 
 <div class="gallery">
 
-<div class="artwork">
-<a href="J.McDonald Bragg Creek Acrylic 10x10.jpg" target="_blank">
-<img src="J.McDonald Bragg Creek Acrylic 10x10.jpg"
-     alt="Bragg Creek by Jo McDonald">
-</a>
-<h3>Bragg Creek</h3>
-<p>Acrylic · 10 × 10 · <strong>SOLD</strong></p>
-
-</div>
+{% for artwork in site.artworks %}
+{% if artwork.selected == true %}
 
 <div class="artwork">
-<a href="Jo McDonald Dusk 12x12.jpg" target="_blank">
-<img src="Jo McDonald Dusk 12x12.jpg"
-     alt="Dusk by Jo McDonald">
-</a>
-<h3>Dusk</h3>
-<p>12 × 12 · <strong>SOLD</strong></p>
+  <a href="{{ artwork.image | relative_url }}" target="_blank">
+    <img src="{{ artwork.image | relative_url }}"
+         alt="{{ artwork.title }} by Jo McDonald">
+  </a>
+
+  <h3>{{ artwork.title }}</h3>
+
+  <p>
+    {{ artwork.medium }}
+    {% if artwork.size %} · {{ artwork.size }}{% endif %}
+    {% if artwork.status == "Sold" %} · <strong>SOLD</strong>{% endif %}
+  </p>
 </div>
 
-<div class="artwork">
-<a href="J.McDonald The Golden Hour 24 x 12 Acrylic Unframed .jpg" target="_blank">
-<img src="J.McDonald The Golden Hour 24 x 12 Acrylic Unframed .jpg"
-     alt="The Golden Hour by Jo McDonald">
-</a>
-<h3>The Golden Hour</h3>
-<p>Acrylic · 24 × 12 · <strong>SOLD</strong></p>
-</div>
-
-<div class="artwork">
-<a href="J.McDonald The Peak 7.5 x 7.5 Acrylic Framed 16.5x16.5.jpg" target="_blank">
-<img src="J.McDonald The Peak 7.5 x 7.5 Acrylic Framed 16.5x16.5.jpg"
-     alt="The Peak by Jo McDonald">
-</a>
-<h3>The Peak</h3>
-<p>Acrylic · 7.5 × 7.5 · <strong>SOLD</strong></p>
-</div>
+{% endif %}
+{% endfor %}
 
 </div>
 </section>
