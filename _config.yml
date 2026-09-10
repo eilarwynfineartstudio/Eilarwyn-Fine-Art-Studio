@@ -5,7 +5,7 @@ collections:
   artworks:
     output: true
 
-    defaults:
+defaults:
   - scope:
       path: ""
       type: artworks
