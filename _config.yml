@@ -4,3 +4,10 @@ description: Original Art, Inspired by Nature's Wild Beauty
 collections:
   artworks:
     output: true
+
+    defaults:
+  - scope:
+      path: ""
+      type: artworks
+    values:
+      layout: artwork
