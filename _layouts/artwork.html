@@ -1,57 +1,159 @@
 ---
-
 ---
 
-<style>
-.artwork-page {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 0 24px;
-  text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.artwork-page h1 {
-  margin-bottom: 10px;
-}
+  <title>{{ page.title }} | Eilarwyn Fine Art Studio</title>
 
-.artwork-details {
-  margin-bottom: 35px;
-  line-height: 1.8;
-}
+  <style>
+    body {
+      margin: 0;
+      background: #f5f0e6;
+      color: #24382f;
+      font-family: Georgia, "Times New Roman", serif;
+    }
 
-.main-artwork-image {
-  max-width: 800px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto 40px;
-  display: block;
-}
+    .site-header {
+      text-align: center;
+      padding: 30px 20px 20px;
+      border-bottom: 1px solid #b89b5e;
+    }
 
-.additional-photos {
-  margin-top: 50px;
-}
+    .site-logo {
+      display: block;
+      width: min(650px, 90%);
+      height: auto;
+      margin: 0 auto 20px;
+    }
 
-.additional-photos h2 {
-  margin-bottom: 30px;
-}
+    .site-nav a {
+      color: #24382f;
+      text-decoration: none;
+      margin: 0 14px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
 
-.additional-photos img {
-  max-width: 700px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 35px;
-}
+    .site-nav a:hover {
+      color: #9a7b3f;
+    }
 
-.back-link {
-  display: inline-block;
-  margin-top: 30px;
-}
-</style>
+    .artwork-page {
+      max-width: 1000px;
+      margin: 55px auto;
+      padding: 0 24px 70px;
+      text-align: center;
+    }
 
-<div class="artwork-page">
+    .artwork-page h1 {
+      font-weight: normal;
+      font-size: 36px;
+      margin: 0 0 12px;
+    }
+
+    .gold-line {
+      width: 70px;
+      height: 1px;
+      background: #b89b5e;
+      margin: 18px auto 22px;
+    }
+
+    .artwork-details {
+      line-height: 1.8;
+      margin-bottom: 35px;
+      font-size: 17px;
+    }
+
+    .main-artwork-image {
+      display: block;
+      max-width: 800px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 45px;
+    }
+
+    .additional-photos {
+      margin-top: 55px;
+      padding-top: 35px;
+      border-top: 1px solid #b89b5e;
+    }
+
+    .additional-photos h2 {
+      font-weight: normal;
+      letter-spacing: 2px;
+      font-size: 21px;
+      margin-bottom: 35px;
+    }
+
+    .additional-photos img {
+      display: block;
+      max-width: 700px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 40px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 11px 20px;
+      border: 1px solid #b89b5e;
+      color: #24382f;
+      text-decoration: none;
+      letter-spacing: 1px;
+      font-size: 14px;
+    }
+
+    .back-link:hover {
+      background: #eee5d4;
+    }
+
+    @media (max-width: 600px) {
+      .site-nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+
+      .artwork-page {
+        margin-top: 35px;
+      }
+
+      .artwork-page h1 {
+        font-size: 29px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <a href="{{ '/' | relative_url }}">
+    <img
+      class="site-logo"
+      src="{{ '/eilarwyn-logo.png' | relative_url }}"
+      alt="Eilarwyn Fine Art Studio — Jo McDonald Artist">
+  </a>
+
+  <nav class="site-nav">
+    <a href="{{ '/' | relative_url }}">HOME</a>
+    <a href="{{ '/#available' | relative_url }}">GALLERY</a>
+    <a href="{{ '/#about' | relative_url }}">ABOUT</a>
+    <a href="{{ '/#events' | relative_url }}">EVENTS</a>
+    <a href="{{ '/#contact' | relative_url }}">CONTACT</a>
+  </nav>
+
+</header>
+
+<main class="artwork-page">
 
   <h1>{{ page.title }}</h1>
+  <div class="gold-line"></div>
 
   <div class="artwork-details">
     {{ page.medium }}
@@ -69,26 +171,29 @@
   <img
     class="main-artwork-image"
     src="{{ page.image | relative_url }}"
-    alt="{{ page.title }} by Jo McDonald"
-  >
+    alt="{{ page.title }} by Jo McDonald">
 
   {% if page.additional_images and page.additional_images.size > 0 %}
-  <div class="additional-photos">
 
-    <h2>Additional Views</h2>
+  <section class="additional-photos">
+
+    <h2>ADDITIONAL VIEWS</h2>
 
     {% for image in page.additional_images %}
       <img
         src="{{ image | relative_url }}"
-        alt="Additional view of {{ page.title }} by Jo McDonald"
-      >
+        alt="Additional view of {{ page.title }} by Jo McDonald">
     {% endfor %}
 
-  </div>
+  </section>
+
   {% endif %}
 
   <a class="back-link" href="{{ '/' | relative_url }}">
-    ← Back to Gallery
+    ← BACK TO GALLERY
   </a>
 
-</div>
+</main>
+
+</body>
+</html>
