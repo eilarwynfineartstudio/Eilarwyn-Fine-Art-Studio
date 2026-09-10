@@ -55,7 +55,10 @@ content:
         type: boolean
         default: false
 
-       - name: additional_images
+      - name: additional_images
         label: Additional Photos
         type: image
-        list: true
+        options:
+          multiple:
+            max: 8
+          unique: true
